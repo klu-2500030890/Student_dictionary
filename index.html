@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Directory</title>
+    <link rel="stylesheet" href="index.css"/>
+</head>
+<body onload="loadData()">
+    <header>Student Directory</header>
+    <section>
+        <div id="studentdata"></div>
+    </section>
+    <footer>Copyright @ 2025</footer>
+</body>
+<script>
+    const students = [
+        {id: "S001" ,name: "John", s1: 70, s2: 95, s3: 98, s4: 97, s5:96},
+        {id: "S002" ,name: "Vicky", s1: 60, s2: 65, s3: 88, s4: 17, s5:66},
+        {id: "S003" ,name: "Roy", s1: 90, s2: 25, s3: 83, s4: 21, s5:56},
+        {id: "S004" ,name: "Ramesh", s1: 45, s2: 38, s3: 100, s4: 99, s5:45},
+        {id: "S005" ,name: "Bravo", s1: 60, s2: 63, s3: 23, s4: 45, s5:90},
+        {id: "S006" ,name: "Dimen", s1: 62, s2: 66, s3: 48, s4: 77, s5:86},
+        {id: "S007" ,name: "Jabe", s1: 90, s2: 65, s3: 86, s4: 19, s5:69},
+        {id: "S008" ,name: "Tom", s1: 68, s2: 45, s3: 87, s4: 47, s5:96},
+        {id: "S009" ,name: "Rilan", s1: 68, s2: 75, s3: 58, s4: 67, s5:66},
+        {id: "S010" ,name: "Xera", s1: 63, s2: 25, s3: 98, s4: 67, s5:26},
+         {id: "S011" ,name: "dodge", s1: 73, s2: 65, s3: 98, s4: 98, s5:86}
+    ];
+    function loadData(){
+        let stable = `<table>
+                          <thead>
+                              <tr>
+
+                                <th style="width:50px">S#</th>
+                                <th style="width:100px">Student ID</th>
+                                <th style="width:300px">Student Name</th>
+                                <th style="width:75px">S1</th>
+                                <th style="width:75px">S2</th>
+                                <th style="width:75px">S3</th>
+                                <th style="width:75px">S4</th>
+                                <th style="width:75px">S5</th>
+                                <th style="width:75px">Total</th>
+                                <th style="width:75px">Average</th>
+                                <th style="width:75px">Grade</th>
+                                <th></th>
+                              </tr>
+                            </thead>`;
+        for(i=0;i<10;i++)
+        {
+            const student = students[i];
+            const total = student.s1+student.s2+student.s3+student.s4+student.s5;
+            const average = total/5;
+            let grade = "";
+            if(average>=90)
+        {
+            grade = "A+";
+        }
+        else if(average>=80 && average<=89)
+        {
+            grade = "A";
+        }
+        else if(average>=70 && average<=79)
+        {
+            grade = "B";
+        }
+        else if(average>=60 && average<=69)
+        {
+            grade = "C";
+        }
+        else {
+            grade = "F";
+        }
+        stable += `<tr>
+                        <td>${i+1}</td>
+                        <td>${student.id}</td>
+                        <td style="text-align:left">${student.name}</td>
+                        <td>${student.s1}</td>
+                        <td>${student.s2}</td>
+                        <td>${student.s3}</td>
+                        <td>${student.s4}</td>
+                        <td>${student.s5}</td>
+                        <td>${total}</td>
+                        <td>${average.toFixed(1)}</td>
+                        <td>${grade}</td>
+                        <td></td>
+                   </tr>`;
+
+    }
+    stable += `</table>`;
+    studentdata.innerHTML = stable;
+}
+</script>
+</html>

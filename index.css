@@ -1,0 +1,49 @@
+html, body{
+    margin: 0;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+    background: white;
+}
+header{
+    height: 50px;
+    line-height: 50px;
+    background: linear-gradient(135deg,#c21500,#ffc500);
+    color: rgb(0, 0, 0);
+    font-size: 16pt;
+    font-weight: bold;
+}
+footer{
+    height: 30px;
+    line-height: 30px;
+    background: linear-gradient(135deg,#c21500,#ffc500);
+    color: rgb(18, 90, 108);
+    font-size: 12pt;
+    font-weight: bold;
+    font-style: italic;
+}
+section{
+    height: calc(100% - 80px);
+    overflow: auto;
+    text-align: center;
+}
+section table{
+    width: 100%;
+    border-collapse: collapse;
+
+}
+section table thead{
+    background: #f4760f;
+    position: fixed;
+    top: 50px
+}
+section table tr{
+    height: 30px;
+}
+section table tr th,
+section table tr td{
+    border: 1px solid rgb(41, 39, 26);
+}
+section table tr:nth-child(even){
+    background: #faef89;
+}

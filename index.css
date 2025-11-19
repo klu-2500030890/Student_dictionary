@@ -8,19 +8,21 @@ html, body{
 header{
     height: 50px;
     line-height: 50px;
-    background: linear-gradient(135deg,#c21500,#ffc500);
+    background: linear-gradient(135deg,yellow,rgb(255, 139, 56));
     color: rgb(0, 0, 0);
     font-size: 16pt;
     font-weight: bold;
+    text-align: center;
 }
 footer{
     height: 30px;
     line-height: 30px;
-    background: linear-gradient(135deg,#c21500,#ffc500);
-    color: rgb(18, 90, 108);
+    background: linear-gradient(135deg,yellow,rgb(255, 139, 56));
+    color: rgb(116, 9, 9);
     font-size: 12pt;
     font-weight: bold;
     font-style: italic;
+    text-align: center;
 }
 section{
     height: calc(100% - 80px);
@@ -33,17 +35,15 @@ section table{
 
 }
 section table thead{
-    background: #f4760f;
-    position: fixed;
-    top: 50px
+    background: #f49726;
 }
 section table tr{
     height: 30px;
 }
 section table tr th,
 section table tr td{
-    border: 1px solid rgb(41, 39, 26);
+    border: 1px solid greenyellow;
 }
 section table tr:nth-child(even){
-    background: #faef89;
+    background: rgb(255, 177, 43);
 }
